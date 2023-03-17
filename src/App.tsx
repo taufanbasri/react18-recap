@@ -1,9 +1,18 @@
-import Alert from "./components/Alert";
+import Button from "./components/Button";
 
 function App() {
   return (
     <div>
-      <Alert>Hello World</Alert>
+      <Button onClick={() => console.log("Clicked")}>Default</Button>
+      <Button color="primary" onClick={() => console.log("Clicked")}>
+        Primary
+      </Button>
+      <Button color="danger" onClick={() => console.log("Clicked")}>
+        Danger
+      </Button>
+      <Button color="secondary" onClick={() => console.log("Clicked")}>
+        Secondary
+      </Button>
     </div>
   );
 }
