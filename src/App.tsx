@@ -57,7 +57,7 @@ function App() {
 
     setUsers(users.map((u) => (u.id === user.id ? updatedUser : u)));
 
-    apiClient.patch("/users/" + user.id, updatedUser).catch((err) => {
+    userService.updateUser(updatedUser).catch((err) => {
       setError(err.message);
       setUsers(originalUser);
     });
