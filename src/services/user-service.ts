@@ -20,6 +20,11 @@ class UserService {
   deleteUser(id: number) {
     return apiClient.delete("/users/" + id)
   }
+
+  createUser(user: User) {
+    return apiClient
+      .post("/users", user)
+  }
 }
 
 export default new UserService
